@@ -1,0 +1,45 @@
+.mat-checkbox.mat-Theme-Blue .mat-checkbox-frame {
+   border-color: rgb(39, 155, 183) !important;
+}
+
+.mat-checkbox.mat-Theme-Blue.mat-checkbox-checked .mat-checkbox-background{
+   background-image: linear-gradient(to left , #269ab7, #3BB8A6) !important;
+}
+
+
+.mat-datepicker-content{
+   background-color: transparent !important;
+   color: rgba(255, 255, 255, 0.8) !important;
+   background-image: linear-gradient(to top left , #1e293d, #21677a) !important;
+}
+.mat-calendar-arrow {
+   border-top-color: rgba(255, 255, 255, 0.8) !important;
+}
+.mat-datepicker-content .mat-calendar-next-button,
+.mat-datepicker-content .mat-calendar-previous-button,
+.mat-datepicker-toggle {
+   color: rgba(255, 255, 255, 0.8) !important;
+}
+.mat-calendar-table-header {
+   color: rgba(255, 255, 255, 0.4) !important;
+}
+.mat-calendar-body-label {
+   color: rgba(255, 255, 255, 0.5) !important;
+}
+.mat-calendar-body-selected {
+   background-color: transparent !important;
+   color: #fff !important;
+   background-image: linear-gradient(to left , #269ab7, #3BB8A6) !important;
+}
+.cdk-keyboard-focused .mat-calendar-body-active>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected),
+.cdk-program-focused .mat-calendar-body-active>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected),
+.mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected) {
+   background-color: transparent !important;
+   background-image: linear-gradient(to left , rgba(38, 154, 183, 0.3), rgba(59, 184, 166, 0.3)) !important;
+}
+.mat-calendar-body-cell-content {
+   color: rgba(239, 239, 239, 0.9) !important;
+}
+.mat-calendar-body-today.mat-calendar-body-selected {
+   box-shadow: none !important;
+}

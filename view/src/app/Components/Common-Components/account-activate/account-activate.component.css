@@ -1,0 +1,302 @@
+.AccountActivate-Component{
+   position: absolute;
+   display: table;
+   width: 100%;
+   height: 100%;
+}
+.AccountActivate-Component > .Background {
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   background-image: linear-gradient(to bottom, #1e293d, #23B4CA);
+   z-index: -1;
+}
+.AccountActivate-Component > .Background-Dark {
+   position: fixed;
+   background: #1E293D;
+   width: 100%;
+   height: 100%;
+   opacity: 0.5;
+   z-index: -1;
+}
+.AccountActivate-Component > .Center-Section{
+   display: table-cell;
+   vertical-align: middle;
+   text-align: center;
+   width: 100%;
+}
+.AccountActivate-Component > .Center-Section > .Box-Section {
+   display: grid;
+   grid-template-columns: 80%;
+   justify-content: center;
+}
+.AccountActivate-Component .Box-Section > .Box {
+   height: 600px;
+   box-shadow: 1px 1px 14px #1d2f42;
+   border-radius: 5px;
+   background-image: linear-gradient(to top left , #1e293d, #21677a);
+}
+.AccountActivate-Component .Box-Section .Box .Box-Header .Header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 5px 20px;
+}
+.AccountActivate-Component .Box-Section .Box .Box-Header .Header h5 {
+   font-family: 'Carme', sans-serif;
+   padding: 0px 6px;
+   font-size: 24px;
+   font-weight: 600;
+   color: #239ebd;
+   letter-spacing: 1px;
+}
+.AccountActivate-Component .Box-Section .Box .Box-Header .Header img {
+   max-width: 100px;
+}
+.AccountActivate-Component .Box .Box-Body {
+   padding: 15px 20px;
+   border-style: solid;
+   -webkit-border-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(rgba(0, 0, 0, 0))) 1 100%;
+   -webkit-border-image: -webkit-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
+   -moz-border-image: -moz-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
+   -o-border-image: -o-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
+   border-image: linear-gradient(to bottom, rgba(31, 64, 82, 0), #4db6c970, rgba(31, 64, 82, 0)) 1 100%;
+}
+.AccountActivate-Component .Box .RowStyle-3 {
+   display: grid;
+   grid-template-columns: 30% 30% 30%;
+   grid-column-gap: 5%;
+}
+.AccountActivate-Component .Box .RowStyle-1 .ColumnStyle {
+   padding: 10px;
+}
+.AccountActivate-Component .Box .Profile-Img {
+   max-width: 180px;
+   max-height: 180px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 35px;
+   margin-bottom: 25px;
+   background-image: radial-gradient( #21677B, #1e293d);
+   box-shadow: 1px 1px 14px #00000063;
+   padding: 15px;
+   position: relative;
+   box-sizing: content-box;
+}
+.AccountActivate-Component .Box .Profile-Img > img {
+   width: calc(180px + 30px);
+   height: calc(180px + 30px);
+   margin: -15px;
+}
+.AccountActivate-Component .Box .Profile-Img  span.Img-Upload-Btn {
+   position: absolute;
+   top: -20px;
+   right: -20px;
+   width: 40px;
+   height: 40px;
+   text-align: center;
+   background-image: linear-gradient(to left , #269ab7, #3BB8A6);
+   line-height: 50px;
+   border-radius: 40px;
+   color: #ffffff;
+   box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+   cursor: pointer;
+}
+.AccountActivate-Component .Box  .Form-Input {
+   padding: 15px 0px;
+   width: 100%;
+}
+.AccountActivate-Component .Box .Form-Input > input {
+   background-color: transparent;
+   outline: none;
+   border: none;
+   width: 100%;
+   border-bottom: 2px solid #227084;
+   font-size: 17px;
+   padding: 5px 0px;
+   letter-spacing: 0px;
+   color: #0daad0;
+   line-height: 17px;
+}
+.AccountActivate-Component .Box .Form-Input > input::placeholder {
+   color:    #227084;
+}
+.AccountActivate-Component .Box .Form-Input > input::-webkit-input-placeholder {
+   color:    #227084;
+}
+.AccountActivate-Component .Box .Form-Input > input:-moz-placeholder {
+  color:    #227084;
+  opacity:  1;
+}
+.AccountActivate-Component .Box .Form-Input > input::-moz-placeholder {
+  color:    #227084;
+  opacity:  1;
+}
+.AccountActivate-Component .Box .Form-Input > input::placeholder {
+   color:    #227084;
+}
+.AccountActivate-Component .Box .Form-Input .Input-Suggestion {
+   position: relative;
+}
+.AccountActivate-Component .Box .Form-Input .Input-Suggestion .Input-Info {
+   text-align: left;
+   padding: 2px 0px;
+   color: rgba(255, 255, 255, 0.15);
+   font-size: 14px;
+   font-family: 'Carme', sans-serif;
+   height: 0px;
+   margin: 0px;
+   line-height: 15px;
+}
+.AccountActivate-Component .Box .Form-Input .Input-Suggestion .Input-Info span.Required {
+   color: rgba(245, 130, 32, 0.53);
+}
+.AccountActivate-Component .Box .Form-Input .Input-Suggestion .Input-Info span.Disabled:after {
+   font-size: 15px;
+   position: absolute;
+   top: -20px;
+   right: 0;
+   font-family: 'Material Icons';
+   content: "lock";
+   color: rgba(255, 255, 255, 0.18);
+}
+.AccountActivate-Component .Box .Form-Input .Input-Suggestion .Input-Alert{
+   text-align: right;
+   padding: 2px 0px;
+   color: rgb(228, 68, 68);
+   font-size: 14px;
+   font-family: 'Carme', sans-serif;
+   height: 0px;
+   margin: 0px;
+   line-height: 15px;
+}
+.AccountActivate-Component .Box .Form-Input > input.ng-dirty.ng-invalid{
+   border-color: rgb(228, 68, 68);
+   border-width: 1px;
+}
+
+
+
+.AccountActivate-Component .Box .Box-Footer{
+   margin-top: 30px;
+}
+.AccountActivate-Component .Box .RowStyle-2{
+   display: grid;
+   grid-template-columns: 47% 47%;
+   grid-column-gap: 6%;
+   align-items: center;
+}
+.AccountActivate-Component .Box .Box-Footer .Confirmation-Section {
+   text-align: left;
+   padding-left: 20px;
+   font-family: 'Carme', sans-serif;
+   font-size: 15px;
+   font-weight: 400;
+   color: #14819c;
+}
+.AccountActivate-Component .Box .Box-Footer .Confirmation-Section .mat-checkbox-frame {
+   border-color: rgb(39, 155, 183);
+}
+.AccountActivate-Component .Box .Box-Footer .Activation-Btn {
+   text-align: right;
+   padding-right: 20px;
+}
+.AccountActivate-Component .Box .Box-Footer .Activation-Btn > button {
+   background-image: linear-gradient(to left , #269ab7, #3BB8A6);
+   border: none;
+   color: #ffff;
+   font-size: 14px;
+   padding: 10px 20px;
+   letter-spacing: 1px;
+   outline: none;
+   word-spacing: 3px;
+   cursor: pointer;
+   box-shadow: 0.5px 0.5px 5px #20677bdb;
+   border-radius: 2px;
+   font-weight: 500;
+   position: relative;
+}
+.AccountActivate-Component .Box .Box-Footer  .Activation-Btn.Btn-Disabled button:after {
+   font-size: 24px;
+   line-height: 40px;
+   background: rgba(119, 119, 119, 0.55);
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   top: 0;
+   right: 0;
+   left: 0;
+   bottom: 0;
+   cursor: not-allowed;
+   font-family: 'Material Icons';
+   content: "lock";
+   color: #20485b;
+}
+.AccountActivate-Component .Box .Box-Footer  .Activation-Btn.Btn-Loading button:after { 
+   background: rgba(119, 119, 119, 0.55);
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   content: "";
+   top: 0;
+   left: 0;
+}
+.AccountActivate-Component .Box .Box-Footer  .Activation-Btn.Btn-Loading button:before {
+   font-size: 24px;
+   line-height: 40px;
+   position: absolute;
+   top: 0;
+   right: 0;
+   left: 0;
+   font-family: 'Material Icons';
+   content: "autorenew";
+   z-index: 1000;
+   color: #20485b;
+   -webkit-animation:spin 2s linear infinite;
+   -moz-animation:spin 2s linear infinite;
+   animation:spin 2s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+.Model-Footer {
+    text-align: right;
+    padding: 0px 20px;
+    padding-bottom: 10px;
+}
+
+.Model-Footer button.Cropper-Submit {
+   background-image: linear-gradient(to left , #269ab7, #3BB8A6);
+   border: none;
+   color: #ffff;
+   font-size: 14px;
+   padding: 6px 20px;
+   letter-spacing: 1px;
+   outline: none;
+   word-spacing: 3px;
+   cursor: pointer;
+   box-shadow: 0.5px 0.5px 5px #20677bdb;
+   border-radius: 2px;
+   font-weight: 500;
+   position: relative;
+}
+.Model-Footer button.Cropper-Cancel {
+   background-image: linear-gradient(to left , #ff5200bf, #ff0000b3);
+   border: none;
+   color: #ffffff;
+   font-size: 14px;
+   padding: 6px 20px;
+   letter-spacing: 1px;
+   outline: none;
+   word-spacing: 3px;
+   cursor: pointer;
+   box-shadow: 0.5px 0.5px 5px #20677bdb;
+   border-radius: 2px;
+   font-weight: 500;
+   position: relative;
+   margin-right: 20px;
+}

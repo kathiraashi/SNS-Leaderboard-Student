@@ -1,0 +1,203 @@
+<div class="AccountActivate-Component">
+   <div class="Background"></div>
+   <div class="Background-Dark"></div>
+   <div class="Center-Section">
+      <div class="Box-Section">
+         <div class="Box">
+            <div class="Box-Header">
+               <div class="Header">
+                  <h5> Account Activation </h5>
+                  <img src="../../../../assets/images/background/SNS.png" alt="">
+               </div>
+            </div>
+            <div class="Box-Body"  *ngIf="Form">
+               <form [formGroup]="Form">
+                  <div class="RowStyle-3">
+                     <div class="ColumnStyle">
+                        <div class="Profile-Img">
+                           <ng-container *ngIf="!Show_Img_Preview">
+                              <img src="{{Default_Img}}" alt="">
+                           </ng-container>
+                           <ng-container *ngIf="Show_Img_Preview">
+                              <img [src]="Cropped_Img" alt="">
+                           </ng-container>
+                           <span (click)="profileImg.click()" class="Img-Upload-Btn"> <i class="material-icons"> add_photo_alternate </i> </span>
+                           <input type="file" (change)="fileChangeEvent($event)" accept=".PNG, .png, JPEG, .jpeg, JPG, .jpg, .GIF, .gif" #profileImg style="display:none;">
+                        </div>
+                        <div class="Form-Input">
+                           <input type="text" formControlName="Reg_No">
+                           <div class="Input-Suggestion">
+                              <p class="Input-Info">
+                                 <span class="Disabled"> Registration Number  </span>
+                              </p>
+                           </div>
+                        </div>
+                        <div class="Form-Input">
+                           <input type="text" formControlName="Name">
+                           <div class="Input-Suggestion">
+                              <p class="Input-Info">
+                                 <span class="Disabled"> Name </span>
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="ColumnStyle">
+                        <div class="Form-Input">
+                           <input type="text" formControlName="Institution">
+                           <div class="Input-Suggestion">
+                              <p class="Input-Info">
+                                 <span class="Disabled"> Institution </span>
+                              </p>
+                           </div>
+                        </div>
+                        <div class="Form-Input">
+                           <input type="text" formControlName="Course">
+                           <div class="Input-Suggestion">
+                              <p class="Input-Info">
+                                 <span class="Disabled"> Course </span>
+                              </p>
+                           </div>
+                        </div>
+                        <div class="Form-Input">
+                           <input type="text" formControlName="Department">
+                           <div class="Input-Suggestion">
+                              <p class="Input-Info">
+                                 <span class="Disabled"> Department </span>
+                              </p>
+                           </div>
+                        </div>
+                        <div class="Form-Input">
+                           <input type="text" formControlName="Yearly_Badge">
+                           <div class="Input-Suggestion">
+                              <p class="Input-Info">
+                                 <span class="Disabled"> Batch </span>
+                              </p>
+                           </div>
+                        </div>
+                        <div class="Form-Input">
+                           <input type="text" formControlName="Email">
+                           <div class="Input-Suggestion">
+                              <p class="Input-Info" *ngIf="!Form.controls['Email'].errors || !Form.controls['Email'].dirty">
+                                 <span> Registered Email <span class="Required"> * </span> </span>
+                              </p>
+                              <p class="Input-Alert" *ngIf="Form.controls['Email'].errors && Form.controls['Email'].dirty">
+                                 <span *ngIf="Form.controls['Email'].errors.required"> Registered Email is Required </span>
+                                 <span *ngIf="Form.controls['Email'].errors.email"> Email Address Not Valid </span>
+                              </p>
+                           </div>
+                        </div>
+                        <div class="Form-Input">
+                           <input type="text" formControlName="Mobile">
+                           <div class="Input-Suggestion">
+                              <p class="Input-Info" *ngIf="!Form.controls['Mobile'].errors || !Form.controls['Mobile'].dirty">
+                                 <span> Mobile Number <span class="Required"> * </span> </span>
+                              </p>
+                              <p class="Input-Alert" *ngIf="Form.controls['Mobile'].errors && Form.controls['Mobile'].dirty">
+                                 <span *ngIf="Form.controls['Mobile'].errors.required"> Mobile Number is Required </span>
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="ColumnStyle">
+                        <div class="Form-Input">
+                           <input type="text" formControlName="Gender">
+                           <div class="Input-Suggestion">
+                              <p class="Input-Info" *ngIf="!Form.controls['Gender'].errors || !Form.controls['Gender'].dirty">
+                                 <span> Gender <span class="Required"> * </span> </span>
+                              </p>
+                              <p class="Input-Alert" *ngIf="Form.controls['Gender'].errors && Form.controls['Gender'].dirty">
+                                 <span *ngIf="Form.controls['Gender'].errors.required"> Gender is Required </span>
+                              </p>
+                           </div>
+                        </div>
+                        <div class="Form-Input">
+                           <input type="text" formControlName="Blood_Group">
+                           <div class="Input-Suggestion">
+                              <p class="Input-Info" *ngIf="!Form.controls['Blood_Group'].errors || !Form.controls['Blood_Group'].dirty">
+                                 <span> Blood Group <span class="Required"> * </span> </span>
+                              </p>
+                              <p class="Input-Alert" *ngIf="Form.controls['Blood_Group'].errors && Form.controls['Blood_Group'].dirty">
+                                 <span *ngIf="Form.controls['Blood_Group'].errors.required"> Blood Group is Required </span>
+                              </p>
+                           </div>
+                        </div>
+                        <div class="Form-Input">
+                           <input type="text" formControlName="DOB" [matDatepicker]="Datepicker_1" (click)="Datepicker_1.open()" (keypress)="NotAllow()" (keydown)="NotAllow()">
+                           <mat-datepicker color="Theme-Color" #Datepicker_1></mat-datepicker>
+                           <div class="Input-Suggestion">
+                              <p class="Input-Info" *ngIf="!Form.controls['DOB'].errors || !Form.controls['DOB'].dirty">
+                                 <span> Date Of Birth <span class="Required"> * </span> </span>
+                              </p>
+                              <p class="Input-Alert" *ngIf="Form.controls['DOB'].errors && Form.controls['DOB'].dirty">
+                                 <span *ngIf="Form.controls['DOB'].errors.required"> Date Of Birth is Required </span>
+                              </p>
+                           </div>
+                        </div>
+                        <div class="Form-Input">
+                           <input type="password" formControlName="Password">
+                           <div class="Input-Suggestion">
+                              <p class="Input-Info" *ngIf="!Form.controls['Password'].errors || !Form.controls['Password'].dirty">
+                                 <span> Password <span class="Required"> * </span> </span>
+                              </p>
+                              <p class="Input-Alert" *ngIf="Form.controls['Password'].errors && Form.controls['Password'].dirty">
+                                 <span *ngIf="Form.controls['Password'].errors.required"> Password is Required </span>
+                              </p>
+                           </div>
+                        </div>
+                        <div class="Form-Input">
+                           <input type="password" formControlName="Confirm_Password">
+                           <div class="Input-Suggestion">
+                              <p class="Input-Info" *ngIf="(!Form.controls['Confirm_Password'].errors || !Form.controls['Confirm_Password'].dirty) && (!Form.controls['Confirm_Password'].dirty || !Form['errors'])">
+                                 <span> Confirm Password <span class="Required"> * </span> </span>
+                              </p>
+                              <p class="Input-Alert" *ngIf="Form.controls['Confirm_Password'].errors && Form.controls['Confirm_Password'].dirty">
+                                 <span *ngIf="Form.controls['Confirm_Password'].errors.required"> Confirm Password is Required </span>
+                              </p>
+                              <p class="Input-Alert" *ngIf="!Form.controls['Confirm_Password'].errors && Form.controls['Confirm_Password'].dirty && Form['errors']">
+                                 <span *ngIf="Form['errors'].notMatch"> Password And Confirm Password Not Match </span>
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </form>
+            </div>
+            <div class="Box-Footer"  *ngIf="Form">
+               <div class="RowStyle-2" >
+                  <div class="ColumnStyle">
+                     <form [formGroup]="Form">
+                        <div class="Confirmation-Section">
+                           <mat-checkbox formControlName="Confirmation" color="Theme-Blue"> Please Confirm That You Agree To Our Terms & Condition </mat-checkbox>
+                        </div>
+                     </form>
+                  </div>
+                  <div class="ColumnStyle">
+                     <div class="Activation-Btn" [ngClass]="{'Btn-Disabled': Form.status !== 'VALID' && !Uploading, 'Btn-Loading': Uploading }">
+                        <button (click)="Submit()"> Update & Login </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<ng-template #Cropper>
+   <div class="modal-body">
+      <image-cropper [imageChangedEvent]="imageChangedEvent"
+                     [maintainAspectRatio]="true"
+                     [aspectRatio]="1 / 1"
+                     [resizeToWidth]="180"
+                     format="jpeg"
+                     imageQuality="100"
+                     (imageCropped)="imageCropped($event)">
+      </image-cropper>
+   </div>
+   <div class="Model-Footer">
+      <button class="Cropper-Cancel" (click)="CancelCrop()"> Cancel </button>
+      <button class="Cropper-Submit" (click)="SetCroppedImg()"> Submit </button>
+   </div>
+</ng-template>
+
+

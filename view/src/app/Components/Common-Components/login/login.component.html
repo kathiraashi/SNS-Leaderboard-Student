@@ -1,0 +1,76 @@
+<div class="Login-Component">
+   <div class="Background"></div>
+   <div class="Background-Dark"></div>
+   <div class="Center-Section">
+      <div class="Box-Section">
+         <div class="Box">
+            <div class="Box-Left">
+               <img src="assets/images/background/leaderboard.png" alt="">
+            </div>
+            <div class="Box-Right">
+               <div class="header-Section">
+                  <div class="Tab-Section">
+                     <h5 [ngClass]="{'Tab-Active': ActiveTab === 'Login'}" (click)="ActiveTabChange('Login')"> LOG IN </h5>
+                     <h5 style="cursor: default"> / </h5>
+                     <h5 [ngClass]="{'Tab-Active': ActiveTab === 'Register'}" (click)="ActiveTabChange('Register')"> REGISTER </h5>
+                  </div>
+                  <div class="Logo-Img">
+                     <img src="assets/images/background/SNS.png" alt="">
+                  </div>
+               </div>
+
+               <ng-container *ngIf="ActiveTab === 'Login'">
+                  <form [formGroup]="LoginForm">
+                     <div class="Form_Input">
+                        <input type="text" formControlName="Email" placeholder="Registered Email">
+                        <p class="Input-Alert" *ngIf="LoginForm.controls['Email'].errors && LoginForm.controls['Email'].dirty">
+                           <span *ngIf="LoginForm.controls['Email'].errors.required"> Registered Email is Required </span>
+                           <span *ngIf="LoginForm.controls['Email'].errors.email"> Email is Not Valid! </span>
+                        </p>
+                     </div>
+                     <div class="Form_Input">
+                        <input type="password" formControlName="Password" placeholder="Password">
+                        <p class="Input-Alert" *ngIf="LoginForm.controls['Password'].errors && LoginForm.controls['Password'].dirty">
+                           <span *ngIf="LoginForm.controls['Password'].errors.required"> Password is Required </span>
+                        </p>
+                     </div>
+                     <div class="Submit_Button">
+                        <button [ngClass]="{'Btn-Disabled': LoginForm.status !== 'VALID'}" (click)="Login()" > LOG IN </button>
+                     </div>
+                     <div class="More-Options">
+                        <div class="Option-One">
+                           Forgot password?
+                        </div>
+                        <div class="Option-Two" (click)="ActiveTabChange('Register')">
+                           Don't have an account ?
+                        </div>
+                     </div>
+                  </form>
+               </ng-container>
+
+               <ng-container *ngIf="ActiveTab === 'Register'">
+                  <form [formGroup]="RegistrationForm">
+                     <div class="Form_Input">
+                        <input type="text" formControlName="Reg_No" placeholder="Registration Number">
+                        <p class="Input-Alert" *ngIf="RegistrationForm.controls['Reg_No'].errors && RegistrationForm.controls['Reg_No'].dirty">
+                           <span *ngIf="RegistrationForm.controls['Reg_No'].errors.required"> Registration Number is Required </span>
+                        </p>
+                     </div>
+                     <div class="Submit_Button">
+                        <button (click)="Register()" [ngClass]="{'Btn-Disabled': RegistrationForm.status !== 'VALID'}"> VALIDATE </button>
+                     </div>
+                     <div class="More-Options">
+                        <div class="Option-One">
+                        </div>
+                        <div class="Option-Two" (click)="ActiveTabChange('Login')">
+                           Already have an account ?
+                        </div>
+                     </div>
+                  </form>
+               </ng-container>
+
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

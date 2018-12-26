@@ -1,0 +1,28 @@
+{
+  "name": "sns-leaderboard-student",
+  "version": "1.0.0",
+  "description": "SNS Group of Institutions",
+  "main": "server.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kathiraashi/SNS-Leaderboard-Student.git"
+  },
+  "keywords": [
+    "SNS-LeaderBoard-Student"
+  ],
+  "author": "kathiravan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kathiraashi/SNS-Leaderboard-Student/issues"
+  },
+  "homepage": "https://github.com/kathiraashi/SNS-Leaderboard-Student#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "path": "^0.12.7"
+  }
+}

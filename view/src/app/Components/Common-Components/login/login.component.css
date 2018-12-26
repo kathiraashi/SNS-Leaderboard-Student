@@ -1,0 +1,216 @@
+.Login-Component{
+   position: absolute;
+   display: table;
+   width: 100%;
+   height: 100%;
+}
+.Login-Component > .Background {
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   background-image: linear-gradient(to bottom, #1e293d, #23B4CA);
+   z-index: -1;
+}
+.Login-Component > .Background-Dark {
+   position: fixed;
+   background: #1E293D;
+   width: 100%;
+   height: 100%;
+   opacity: 0.5;
+   z-index: -1;
+}
+.Login-Component > .Center-Section{
+   display: table-cell;
+   vertical-align: middle;
+   text-align: center;
+}
+.Login-Component > .Center-Section > .Box-Section {
+   display: grid;
+   grid-template-columns: 70%;
+   justify-content: center;
+}
+.Login-Component .Box-Section > .Box {
+   display: grid;
+   grid-template-columns: 50% 50%;
+   height: 400px;
+   box-shadow: 1px 1px 14px #1d2f42;
+   border-radius: 5px;
+   background-image: linear-gradient(to top left , #1e293d, #21677a);
+}
+.Login-Component .Box-Section > .Box > .Box-Left{
+   border-width: 0px 0 0px 2px;
+   border-style: solid;
+   -webkit-border-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(rgba(0, 0, 0, 0))) 1 100%;
+   -webkit-border-image: -webkit-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
+   -moz-border-image: -moz-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
+   -o-border-image: -o-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
+   border-image: linear-gradient(to bottom, rgba(31, 64, 82, 0), #24b4ca85, rgba(31, 64, 82, 0)) 1 100%;
+   opacity: 0.8;
+}
+.Login-Component .Box-Section > .Box > .Box-Left > img {
+   max-width: 100%;
+   max-height: 300px;
+   margin-top: 50px;
+}
+.Login-Component .Box-Section > .Box > .Box-Right{
+   padding: 20px;
+   border-width: 0px 2px 0px 3px;
+   border-style: solid;
+   -webkit-border-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(rgba(0, 0, 0, 0))) 1 100%;
+   -webkit-border-image: -webkit-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
+   -moz-border-image: -moz-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
+   -o-border-image: -o-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
+   border-image: linear-gradient(to bottom, rgba(31, 64, 82, 0), #4db6c970, rgba(31, 64, 82, 0)) 1 100%;
+}
+.Login-Component .Box > .Box-Right > .header-Section {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 40px;
+}
+.Login-Component .Box > .Box-Right .header-Section > .Tab-Section {
+   display: flex;
+   align-items: center;
+}
+.Login-Component .Box > .Box-Right .header-Section > .Tab-Section > h5.Tab-Active {
+   font-weight: 900;
+   font-size: 17px;
+   cursor: default;
+   color: #24b4ca;
+}
+.Login-Component .Box > .Box-Right .header-Section > .Tab-Section > h5 {
+   font-family: 'Carme', sans-serif;
+   padding: 0px 6px;
+   font-size: 15px;
+   font-weight: 500;
+   color: #239ebd;
+   cursor: pointer;
+   letter-spacing: 1px;
+   margin: 0px
+}
+.Login-Component .Box > .Box-Right > .header-Section .Logo-Img {
+   width: 100px;
+}
+.Login-Component .Box > .Box-Right > .header-Section .Logo-Img img {
+   width: 100%;
+}
+.Login-Component .Box > .Box-Right .Form_Input {
+   padding: 20px 0px;
+   width: 80%;
+   margin-left: 10%;
+}
+.Login-Component .Box > .Box-Right .Form_Input > input {
+   background-color: transparent;
+   outline: none;
+   border: none;
+   width: 100%;
+   border-bottom: 2px solid #227084;
+   font-size: 17px;
+   padding: 5px 0px;
+   padding-left: 10px;
+   letter-spacing: 0px;
+   color: #0eaad2;
+   line-height: 17px
+}
+.Login-Component .Box > .Box-Right .Form_Input > input.ng-dirty.ng-invalid{
+   border-color: rgb(228, 68, 68);
+   border-width: 1px;
+}
+.Login-Component .Box > .Box-Right .Form_Input > .Input-Alert{
+   text-align: right;
+   padding: 2px 0px;
+   color: rgb(228, 68, 68);
+   font-size: 14px;
+   font-family: 'Carme', sans-serif;
+   height: 0px;
+   line-height: 15px
+}
+.Login-Component .Form_Input > input::placeholder {
+   color:    #227084;
+}
+.Login-Component .Form_Input > input::-webkit-input-placeholder {
+   color:    #227084;
+}
+.Login-Component .Form_Input > input:-moz-placeholder {
+  color:    #227084;
+  opacity:  1;
+}
+.Login-Component .Form_Input > input::-moz-placeholder {
+  color:    #227084;
+  opacity:  1;
+}
+.Login-Component .Form_Input > input::placeholder {
+   color:    #227084;
+}
+.Login-Component .Box > .Box-Right  .Submit_Button {
+   padding: 20px 0px;
+}
+.Login-Component .Box > .Box-Right  .Submit_Button > button {
+   background-image: linear-gradient(to left , #269ab7, #3BB8A6);
+   border: none;
+   color: #ffff;
+   font-size: 15px;
+   padding: 10px 20px;
+   letter-spacing: 1px;
+   outline: none;
+   word-spacing: 2px;
+   cursor: pointer;
+   box-shadow: 0.5px 0.5px 5px #20677bdb;
+   border-radius: 2px;
+   font-weight: 500;
+   position: relative;
+   padding-left: 40px;
+}
+.Login-Component .Box > .Box-Right  .Submit_Button > button:not(.Btn-Disabled):after {
+   font-size: 24px;
+   line-height: 40px;
+   background: transparent;
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   top: 0;
+   right: 0;
+   left: 0;
+   bottom: 0;
+   cursor: pointer;
+   font-family: 'Material Icons';
+   content: "lock_open";
+   color: #204155;
+   text-align: left;
+}
+.Login-Component .Box > .Box-Right  .Submit_Button > button.Btn-Disabled:after {
+   font-size: 24px;
+   line-height: 40px;
+   background: rgba(125, 124, 124, 0.43);
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   top: 0;
+   right: 0;
+   left: 0;
+   bottom: 0;
+   cursor: not-allowed;
+   font-family: 'Material Icons';
+   content: "lock";
+   color: #204155;
+   text-align: left;
+}
+.Login-Component .Box > .Box-Right  .More-Options {
+   display: flex;
+   justify-content: space-between;
+}
+.Login-Component .Box > .Box-Right  .More-Options > .Option-One {
+   cursor: pointer;
+   padding: 10px 5px;
+   font-size: 15px;
+   font-family: 'Carme', sans-serif;
+   letter-spacing: 1px;
+   color: #1d748a;
+}
+.Login-Component .Box > .Box-Right  .More-Options > .Option-Two {
+   cursor: pointer;
+   padding: 10px 5px;
+   font-size: 15px;
+   font-family: 'Carme', sans-serif;
+   letter-spacing: 1px;
+   color: #1d748a;
+}
