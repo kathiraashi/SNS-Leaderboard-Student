@@ -1,0 +1,389 @@
+<div class="Activity-Component">
+   <div class="Activities-List">
+
+      <div class="Activity" *ngFor="let Activity of Activities_List; let i=index">
+         <h4 class="Activity-Name"> {{Activity?.Activity_Name}} </h4>
+         <h5 class="Level-Name"> {{Activity?.Level?.Level_Name}}  </h5>
+         <h6 class="Activity-Description"> {{Activity?.Description}} </h6>
+         <div class="More">
+            <div class="Max-Points">
+               <span class="Points"> {{Activity?.MaxPoints}} </span>
+               <span class="Text"> Maximum Points </span>
+            </div>
+            <div class="Divider"> </div>
+            <div class="Achievements-Length">
+               <span class="Length"> {{Activity?.MaxPoints_Array?.length}} </span>
+               <span class="Text"> No Of Achievements </span>
+            </div>
+         </div>
+         <div class="Action-Menu">
+            <div class="Action-Menu-Icon">
+               <i class="material-icons"> view_day </i>
+            </div>
+            <div class="Skipped-Action-Icons">
+               <div class="Action-Menu-Icon">
+                  <i class="material-icons"> check_circle </i>
+                  <span class="Action-Text">
+                     <span class="Text"> Completed </span>
+                  </span>
+               </div>
+               <div class="Action-Menu-Icon">
+                  <i class="material-icons"> bookmarks </i>
+                  <span class="Action-Text">
+                     <span class="Text"> Set As Goal </span>
+                  </span>
+               </div>
+               <div class="Action-Menu-Icon">
+                  <i class="material-icons"> indeterminate_check_box </i>
+                  <span class="Action-Text">
+                     <span class="Text"> Skip This </span>
+                  </span>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+      <!-- <div class="Activity InProgress">
+         <h4 class="Activity-Name"> Activity Name</h4>
+         <h5 class="Level-Name"> Level Name</h5>
+         <h6 class="Activity-Description"> Lorem ipsum dolor, Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor, </h6>
+         <div class="More">
+            <div class="Max-Points">
+               <span class="Points"> 90 </span>
+               <span class="Text"> Maximum Points </span>
+            </div>
+            <div class="Divider"> </div>
+            <div class="Achievements-Length">
+               <span class="Length"> 9 </span>
+               <span class="Text"> No Of Achievements </span>
+            </div>
+         </div>
+         <div class="Action-Menu">
+            <div class="Action-Menu-Icon">
+               <i class="material-icons"> view_day </i>
+            </div>
+            <div class="Skipped-Action-Icons">
+               <div class="Action-Menu-Icon">
+                  <i class="material-icons"> check_circle </i>
+                  <span class="Action-Text">
+                     <span class="Text"> Completed </span>
+                  </span>
+               </div>
+               <div class="Action-Menu-Icon">
+                  <i class="material-icons"> bookmarks </i>
+                  <span class="Action-Text">
+                     <span class="Text"> Set As Goal </span>
+                  </span>
+               </div>
+               <div class="Action-Menu-Icon">
+                  <i class="material-icons"> indeterminate_check_box </i>
+                  <span class="Action-Text">
+                     <span class="Text"> Skip This </span>
+                  </span>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="Activity Goal">
+         <h4 class="Activity-Name"> Activity Name</h4>
+         <h5 class="Level-Name"> Level Name</h5>
+         <h6 class="Activity-Description"> Lorem ipsum dolor, Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor, </h6>
+         <div class="More">
+            <div class="Max-Points">
+               <span class="Points"> 90 </span>
+               <span class="Text"> Maximum Points </span>
+            </div>
+            <div class="Divider"> </div>
+            <div class="Achievements-Length">
+               <span class="Length"> 9 </span>
+               <span class="Text"> No Of Achievements </span>
+            </div>
+         </div>
+         <div class="Action-Menu">
+            <div class="Action-Menu-Icon">
+               <i class="material-icons"> view_day </i>
+            </div>
+            <div class="Skipped-Action-Icons">
+               <div class="Action-Menu-Icon">
+                  <i class="material-icons"> check_circle </i>
+                  <span class="Action-Text">
+                     <span class="Text"> Completed </span>
+                  </span>
+               </div>
+               <div class="Action-Menu-Icon">
+                  <i class="material-icons"> bookmarks </i>
+                  <span class="Action-Text">
+                     <span class="Text"> Set As Goal </span>
+                  </span>
+               </div>
+               <div class="Action-Menu-Icon">
+                  <i class="material-icons"> indeterminate_check_box </i>
+                  <span class="Action-Text">
+                     <span class="Text"> Skip This </span>
+                  </span>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="Activity Skipped">
+         <h4 class="Activity-Name"> Activity Name</h4>
+         <h5 class="Level-Name"> Level Name</h5>
+         <h6 class="Activity-Description"> Lorem ipsum dolor, Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor, </h6>
+         <div class="More">
+            <div class="Max-Points">
+               <span class="Points"> 90 </span>
+               <span class="Text"> Maximum Points </span>
+            </div>
+            <div class="Divider"> </div>
+            <div class="Achievements-Length">
+               <span class="Length"> 9 </span>
+               <span class="Text"> No Of Achievements </span>
+            </div>
+         </div>
+         <div class="Action-Menu">
+            <div class="Action-Menu-Icon">
+               <i class="material-icons"> view_day </i>
+            </div>
+            <div class="Skipped-Action-Icons">
+               <div class="Action-Menu-Icon">
+                  <i class="material-icons"> check_circle </i>
+                  <span class="Action-Text">
+                     <span class="Text"> Completed </span>
+                  </span>
+               </div>
+               <div class="Action-Menu-Icon">
+                  <i class="material-icons"> bookmarks </i>
+                  <span class="Action-Text">
+                     <span class="Text"> Set As Goal </span>
+                  </span>
+               </div>
+               <div class="Action-Menu-Icon">
+                  <i class="material-icons"> indeterminate_check_box </i>
+                  <span class="Action-Text">
+                     <span class="Text"> Skip This </span>
+                  </span>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="Activity Completed">
+         <h4 class="Activity-Name"> Activity Name</h4>
+         <h5 class="Level-Name"> Level Name</h5>
+         <h6 class="Activity-Description"> Lorem ipsum dolor, Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor, </h6>
+         <div class="More">
+            <div class="Max-Points">
+               <span class="Points"> 90 </span>
+               <span class="Text"> Maximum Points </span>
+            </div>
+            <div class="Divider"> </div>
+            <div class="Achievements-Length">
+               <span class="Length"> 9 </span>
+               <span class="Text"> No Of Achievements </span>
+            </div>
+         </div>
+         <div class="Action-Menu">
+            <div class="Action-Menu-Icon">
+               <i class="material-icons"> view_day </i>
+            </div>
+            <div class="Skipped-Action-Icons">
+               <div class="Action-Menu-Icon">
+                  <i class="material-icons"> check_circle </i>
+                  <span class="Action-Text">
+                     <span class="Text"> Completed </span>
+                  </span>
+               </div>
+               <div class="Action-Menu-Icon">
+                  <i class="material-icons"> bookmarks </i>
+                  <span class="Action-Text">
+                     <span class="Text"> Set As Goal </span>
+                  </span>
+               </div>
+               <div class="Action-Menu-Icon">
+                  <i class="material-icons"> indeterminate_check_box </i>
+                  <span class="Action-Text">
+                     <span class="Text"> Skip This </span>
+                  </span>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="Activity Completed">
+         <h4 class="Activity-Name"> Activity Name</h4>
+         <h5 class="Level-Name"> Level Name</h5>
+         <h6 class="Activity-Description"> Lorem ipsum dolor, Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor, </h6>
+         <div class="More">
+            <div class="Max-Points">
+               <span class="Points"> 90 </span>
+               <span class="Text"> Maximum Points </span>
+            </div>
+            <div class="Divider"> </div>
+            <div class="Achievements-Length">
+               <span class="Length"> 9 </span>
+               <span class="Text"> No Of Achievements </span>
+            </div>
+         </div>
+         <div class="Action-Menu">
+            <div class="Action-Menu-Icon">
+               <i class="material-icons"> view_day </i>
+            </div>
+            <div class="Skipped-Action-Icons">
+               <div class="Action-Menu-Icon">
+                  <i class="material-icons"> check_circle </i>
+                  <span class="Action-Text">
+                     <span class="Text"> Completed </span>
+                  </span>
+               </div>
+               <div class="Action-Menu-Icon">
+                  <i class="material-icons"> bookmarks </i>
+                  <span class="Action-Text">
+                     <span class="Text"> Set As Goal </span>
+                  </span>
+               </div>
+               <div class="Action-Menu-Icon">
+                  <i class="material-icons"> indeterminate_check_box </i>
+                  <span class="Action-Text">
+                     <span class="Text"> Skip This </span>
+                  </span>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="Activity Completed">
+         <h4 class="Activity-Name"> Activity Name</h4>
+         <h5 class="Level-Name"> Level Name</h5>
+         <h6 class="Activity-Description"> Lorem ipsum dolor, Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor, </h6>
+         <div class="More">
+            <div class="Max-Points">
+               <span class="Points"> 90 </span>
+               <span class="Text"> Maximum Points </span>
+            </div>
+            <div class="Divider"> </div>
+            <div class="Achievements-Length">
+               <span class="Length"> 9 </span>
+               <span class="Text"> No Of Achievements </span>
+            </div>
+         </div>
+         <div class="Action-Menu">
+            <div class="Action-Menu-Icon">
+               <i class="material-icons"> view_day </i>
+            </div>
+            <div class="Skipped-Action-Icons">
+               <div class="Action-Menu-Icon">
+                  <i class="material-icons"> check_circle </i>
+                  <span class="Action-Text">
+                     <span class="Text"> Completed </span>
+                  </span>
+               </div>
+               <div class="Action-Menu-Icon">
+                  <i class="material-icons"> bookmarks </i>
+                  <span class="Action-Text">
+                     <span class="Text"> Set As Goal </span>
+                  </span>
+               </div>
+               <div class="Action-Menu-Icon">
+                  <i class="material-icons"> indeterminate_check_box </i>
+                  <span class="Action-Text">
+                     <span class="Text"> Skip This </span>
+                  </span>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="Activity Completed">
+         <h4 class="Activity-Name"> Activity Name</h4>
+         <h5 class="Level-Name"> Level Name</h5>
+         <h6 class="Activity-Description"> Lorem ipsum dolor, Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor, </h6>
+         <div class="More">
+            <div class="Max-Points">
+               <span class="Points"> 90 </span>
+               <span class="Text"> Maximum Points </span>
+            </div>
+            <div class="Divider"> </div>
+            <div class="Achievements-Length">
+               <span class="Length"> 9 </span>
+               <span class="Text"> No Of Achievements </span>
+            </div>
+         </div>
+         <div class="Action-Menu">
+            <div class="Action-Menu-Icon">
+               <i class="material-icons"> view_day </i>
+            </div>
+            <div class="Skipped-Action-Icons">
+               <div class="Action-Menu-Icon">
+                  <i class="material-icons"> check_circle </i>
+                  <span class="Action-Text">
+                     <span class="Text"> Completed </span>
+                  </span>
+               </div>
+               <div class="Action-Menu-Icon">
+                  <i class="material-icons"> bookmarks </i>
+                  <span class="Action-Text">
+                     <span class="Text"> Set As Goal </span>
+                  </span>
+               </div>
+               <div class="Action-Menu-Icon">
+                  <i class="material-icons"> indeterminate_check_box </i>
+                  <span class="Action-Text">
+                     <span class="Text"> Skip This </span>
+                  </span>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="Activity Completed">
+         <h4 class="Activity-Name"> Activity Name</h4>
+         <h5 class="Level-Name"> Level Name</h5>
+         <h6 class="Activity-Description"> Lorem ipsum dolor, Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor, </h6>
+         <div class="More">
+            <div class="Max-Points">
+               <span class="Points"> 90 </span>
+               <span class="Text"> Maximum Points </span>
+            </div>
+            <div class="Divider"> </div>
+            <div class="Achievements-Length">
+               <span class="Length"> 9 </span>
+               <span class="Text"> No Of Achievements </span>
+            </div>
+         </div>
+         <div class="Action-Menu">
+            <div class="Action-Menu-Icon">
+               <i class="material-icons"> view_day </i>
+            </div>
+            <div class="Skipped-Action-Icons">
+               <div class="Action-Menu-Icon">
+                  <i class="material-icons"> check_circle </i>
+                  <span class="Action-Text">
+                     <span class="Text"> Completed </span>
+                  </span>
+               </div>
+               <div class="Action-Menu-Icon">
+                  <i class="material-icons"> bookmarks </i>
+                  <span class="Action-Text">
+                     <span class="Text"> Set As Goal </span>
+                  </span>
+               </div>
+               <div class="Action-Menu-Icon">
+                  <i class="material-icons"> indeterminate_check_box </i>
+                  <span class="Action-Text">
+                     <span class="Text"> Skip This </span>
+                  </span>
+               </div>
+            </div>
+         </div>
+      </div> -->
+      <!-- <div class="Activity InProgress"></div>
+      <div class="Activity Completed"></div>
+      <div class="Activity Skipped"></div>
+      <div class="Activity Goal"></div> -->
+   </div>
+</div>

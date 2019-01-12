@@ -1,0 +1,134 @@
+<!-- <div class="container-fluid">
+   <div class="row">
+      <div class="col-sm-6">
+         <button [routerLink]="['Dashboard']" > Dashboard </button>
+         <button [routerLink]="['Activities']" > Activity </button>
+      </div>
+      <div class="col-sm-6">
+         <router-outlet></router-outlet>
+      </div>
+   </div>
+</div> -->
+
+<div class="Main-Component">
+   <div class="Background"></div>
+   <div class="Background-Dark"></div>
+
+   <div class="Content-Section">
+      <div class="Left-Section">
+         <div class="User-Profile">
+            <div class="User-Profile-Img">
+               <img src="./../../../assets/images/Basic/student-avatar-1.png" alt="">
+            </div>
+            <div class="User-Profile-Info">
+               <h5 class="User-Name"> Kathiravan </h5>
+               <h5 class="Reg-No"> Reg-No-001 </h5>
+            </div>
+         </div>
+         <div class="Left-Menus">
+            <div class="Menu" [routerLinkActive]="['active']" [routerLink]="['/Main/Dashboard']">
+               <span class="Menu-Icon">
+                  <i class="material-icons"> dashboard </i>
+               </span>
+               <span  class="Menu-Content">
+                  <span> Dashboard </span>
+               </span>
+            </div>
+            <div class="Menu">
+               <span class="Menu-Icon">
+                  <i class="material-icons"> layers </i>
+               </span>
+               <span  class="Menu-Content">
+                  <span> Levels </span>
+               </span>
+            </div>
+            <div class="Menu">
+               <span class="Menu-Icon">
+                  <i class="material-icons"> thumb_up </i>
+               </span>
+               <span  class="Menu-Content">
+                  <span> Achievements </span>
+               </span>
+            </div>
+            <div class="Menu">
+               <span class="Menu-Icon">
+                  <i class="material-icons"> stars </i>
+               </span>
+               <span  class="Menu-Content">
+                  <span> Batches </span>
+               </span>
+            </div>
+            <div class="Menu">
+               <span class="Menu-Icon">
+                  <i class="material-icons"> track_changes </i>
+               </span>
+               <span  class="Menu-Content">
+                  <span> Goals </span>
+               </span>
+            </div>
+            <div class="Menu" [routerLinkActive]="['active']" [routerLink]="['/Main/Activities']">
+               <span class="Menu-Icon">
+                  <i class="material-icons"> list_alt </i>
+               </span>
+               <span  class="Menu-Content">
+                  <span> Activities </span>
+               </span>
+            </div>
+            <div class="Menu">
+               <span class="Menu-Icon">
+                  <i class="material-icons"> account_circle </i>
+               </span>
+               <span  class="Menu-Content">
+                  <span> Profile </span>
+               </span>
+            </div>
+            <div class="Menu">
+               <span class="Menu-Icon">
+                  <i class="material-icons"> perm_phone_msg </i>
+               </span>
+               <span  class="Menu-Content">
+                  <span> Contact Admin </span>
+               </span>
+            </div>
+         </div>
+         <div class="Logo-Section">
+            <img src="./../../../assets/images//background/SNS.png" alt="">
+         </div>
+      </div>
+      <div class="Right-Section">
+         <div class="Right-Section-Header">
+            <div class="Header-Content">
+               <div class="Header-Content-left">
+                  
+               </div>
+               <div class="Header-Content-right">
+                  <div class="Header-Search">
+                     <span class="Header-Search-Icon">
+                        <i class="material-icons">  search </i>
+                     </span>
+                     <span class="Header-Search-Input">
+                        <input type="text" placeholder="Search...">
+                     </span>
+                  </div>
+                  <div class="Header-Notification">
+                     <span class="Header-Notification-Icon">
+                        <i class="material-icons">  notifications_active </i>
+                     </span>
+                     <span class="Notification-Mention">
+                        0
+                     </span>
+                  </div>
+                  <div class="Header-LogOut">
+                     <span class="Header-LogOut-Icon" (click)="LogOut()">
+                        <i class="material-icons">  power_settings_new </i>
+                     </span>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="Right-Section-Content">
+            <router-outlet></router-outlet>
+         </div>
+      </div>
+   </div>
+</div>

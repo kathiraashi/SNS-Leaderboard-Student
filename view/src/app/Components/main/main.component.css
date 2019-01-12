@@ -1,0 +1,318 @@
+.Main-Component{
+   position: absolute;
+   display: table;
+   width: 100%;
+   height: 100%;
+}
+.Main-Component > .Background {
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   background-color:#1f4d61;
+   z-index: -1;
+}
+.Main-Component > .Background-Dark {
+   position: fixed;
+   background: #1E293D;
+   width: 100%;
+   height: 100%;
+   opacity: 0.5;
+   z-index: -1;
+}
+
+.Main-Component > .Content-Section {
+   display: grid;
+   grid-template-columns: 220px auto;
+   position: relative;
+}
+.Main-Component > .Content-Section > .Left-Section {
+   display: block;
+   height: 100vh;
+   position: relative;
+   z-index: 1;
+   background-image: linear-gradient(to top right, #1e293d, #23B4CA 200% );
+   box-shadow: 0px -1px 16px 0px rgba(0, 0, 0, 0.24), 1px 1px 2px rgba(0, 0, 0, 0.12);
+}
+.Main-Component > .Content-Section > .Left-Section > .User-Profile {
+   display: flex;
+   align-items: center;
+   height: 65px;
+   /* background-image: linear-gradient(to right, rgba(31, 210, 184, 0.3), rgba(6, 180, 224, 0.3)); */
+}
+.Main-Component > .Content-Section > .Left-Section .User-Profile-Img {
+   width: 65px;
+   height: 65px;
+}
+.Main-Component > .Content-Section > .Left-Section .User-Profile-Img img {
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+   background-image: linear-gradient(to right, #1fd2b8, #06b4e0);
+   box-shadow: 1px 1px 14px #0b1a3175;
+   display: block;
+   margin: 10px 5px;
+}
+.Main-Component > .Content-Section > .Left-Section .User-Profile-Info {
+   position: relative;
+}
+.Main-Component > .Content-Section > .Left-Section .User-Profile-Info .User-Name {
+   text-align: center;
+   font-size: 20px;
+   font-family: 'Carme', sans-serif;
+   letter-spacing: 0.5px;
+   font-weight: 600;
+   background-image: linear-gradient(to right, #01d4b5, #0cc1ef);
+   color: transparent;
+   -webkit-background-clip: text;
+   margin: 0px;
+   -webkit-text-fill-color: transparent;
+}
+.Main-Component > .Content-Section > .Left-Section .User-Profile-Info .Reg-No {
+   text-align: center;
+   font-family: 'Carme', sans-serif;
+   letter-spacing: 0.5px;
+   font-weight: 600;
+   font-size: 15px;
+   background-image: linear-gradient(to right, #E91E63, #FFC107);
+   color: transparent;
+   -webkit-background-clip: text;
+   margin: 0px;
+   -webkit-text-fill-color: transparent;
+}
+
+.Main-Component > .Content-Section > .Left-Section .Left-Menus{
+   position: relative;
+}
+.Main-Component > .Content-Section > .Left-Section .Left-Menus > .Menu {
+   margin: 5px 5px;
+   height: 50px;
+   color: #fff;
+   display: flex;
+   align-items: center;
+   font-size: 16px;
+   font-family: 'Carme', sans-serif;
+   letter-spacing: 0.5px;
+   cursor: pointer;
+}
+.Main-Component > .Content-Section > .Left-Section .Left-Menus > .Menu:hover,
+.Main-Component > .Content-Section > .Left-Section .Left-Menus > .Menu:active,
+.Main-Component > .Content-Section > .Left-Section .Left-Menus > .Menu:focus,
+.Main-Component > .Content-Section > .Left-Section .Left-Menus > .Menu.active {
+   outline: none;
+   background-image: linear-gradient(to right, #06b4e0, #1fd2b8);
+}
+
+.Main-Component > .Content-Section > .Left-Section .Left-Menus > .Menu:hover *,
+.Main-Component > .Content-Section > .Left-Section .Left-Menus > .Menu:active *,
+.Main-Component > .Content-Section > .Left-Section .Left-Menus > .Menu:focus *,
+.Main-Component > .Content-Section > .Left-Section .Left-Menus > .Menu.active * {
+   background-image: linear-gradient( to left, #253592, #0f7bd2);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+.Main-Component > .Content-Section > .Left-Section .Left-Menus > .Menu .Menu-Icon {
+   padding: 10px;
+   margin-top: 5px;
+}
+.Main-Component > .Content-Section > .Left-Section .Logo-Section {
+   position: absolute;
+   bottom: 20px;
+   width: 100%;
+}
+.Main-Component > .Content-Section > .Left-Section .Logo-Section img {
+   display: block;
+   width: 110px;
+   margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Main-Component > .Content-Section > .Right-Section {
+   margin: 10px 10px 10px 20px;
+   margin-top: 65px;
+   height: calc(100vh - 75px);
+   display: block;
+   background-image: linear-gradient(to top left, #1e293d, #23B4CA 200%);
+   position: relative;
+   box-shadow: -1px 2px 16px 0px rgba(0, 0, 0, 0.24), 2px 3px 2px rgba(0, 0, 0, 0.12);
+}
+.Main-Component > .Content-Section > .Right-Section .Right-Section-Header {
+   position: absolute;
+   top: -65px;
+   width: 100%;
+}
+.Main-Component .Right-Section-Header .Header-Content {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 65px;
+   padding-right: 20px;
+}
+
+.Main-Component .Right-Section-Header .Header-Content .Header-Content-left{
+   position: relative;
+}
+
+.Main-Component .Right-Section-Header .Header-Content .Header-Content-right {
+   display: flex;
+   align-items: center;
+}
+
+
+.Main-Component .Right-Section-Header .Header-Search {
+   padding: 0px 15px;
+   position: relative;
+   z-index: 10;
+}
+.Main-Component .Right-Section-Header .Header-Search-Icon {
+   background-image: linear-gradient(to right, #1fd2b8, #06b4e0);
+   display: block;
+   width: 32px;
+   height: 32px;
+   line-height: 43px;
+   text-align: center;
+   border-radius: 50%;
+   color: #1d293c;
+   cursor: pointer;
+}
+.Main-Component .Right-Section-Header .Header-Search-Input {
+   height: 32px;
+   position: absolute;
+   top: 0px;
+   right: 15px;
+   border-radius: 32px;
+   padding-right: 30px;
+   z-index: -1;
+   background-image: linear-gradient(to right, rgba(31, 210, 184, 0.5), rgba(6, 180, 224, 0.5));
+   opacity: 0.5;
+}
+.Main-Component .Right-Section-Header .Header-Search-Input:hover,
+.Main-Component .Right-Section-Header .Header-Search-Input:focus,
+.Main-Component .Right-Section-Header .Header-Search-Input:active{
+   opacity: 1;
+}
+.Main-Component .Right-Section-Header  .Header-Search-Input input {
+   background-color: transparent;
+   height: 32px;
+   outline: none;
+   border: none;
+   border-radius: 32px;
+   padding: 0px 10px;
+   color: #ffff;
+   letter-spacing: 0.5px;
+   min-width: 250px;
+   font-family: 'Carme', sans-serif;
+}
+.Main-Component .Right-Section-Header  .Header-Search-Input input::placeholder{
+   color: rgba(255, 255, 255, 0.5);
+}
+.Main-Component .Right-Section-Header  .Header-Search-Input input::-webkit-input-placeholder{
+   color: rgba(255, 255, 255, 0.5);
+}
+.Main-Component .Right-Section-Header  .Header-Search-Input input::-moz-placeholder{
+   color: rgba(255, 255, 255, 0.5);
+}
+.Main-Component .Right-Section-Header  .Header-Search-Input input:-ms-input-placeholder{
+   color: rgba(255, 255, 255, 0.5);
+}
+.Main-Component .Right-Section-Header .Header-Search-Icon i.material-icons {
+   font-size: 22px;
+   font-weight: 800;
+   background-image: linear-gradient( to bottom, #253592, #0f7bd2);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.Main-Component .Right-Section-Header .Header-Notification {
+   padding: 0px 10px;
+   position: relative;
+}
+.Main-Component .Right-Section-Header .Header-Notification-Icon {
+   background-image: linear-gradient(to right, #1fd2b8, #06b4e0);
+   display: block;
+   width: 32px;
+   height: 32px;
+   line-height: 40px;
+   text-align: center;
+   border-radius: 50%;
+   color: #1d293c;
+   cursor: pointer;
+}
+.Main-Component .Right-Section-Header .Header-Notification-Icon i.material-icons {
+   font-size: 20px;
+   background-image: linear-gradient( to bottom, #253592, #0f7bd2);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+.Main-Component .Right-Section-Header .Notification-Mention {
+   position: absolute;
+   display: block;
+   width: 17px;
+   height: 17px;
+   border-radius: 50%;
+   top: -8px;
+   right: 3px;
+   font-size: 10px;
+   text-align: center;
+   color: #fff;
+   line-height: 17px;
+   border: none;
+   background-image: linear-gradient(to right, #ef1000, #FF9800);
+}
+
+.Main-Component .Right-Section-Header .Header-LogOut {
+   padding: 0px 10px;
+   position: relative;
+}
+.Main-Component .Right-Section-Header .Header-LogOut-Icon {
+   background-image: linear-gradient(to right, #1fd2b8, #06b4e0);
+   display: block;
+   width: 32px;
+   height: 32px;
+   line-height: 40px;
+   text-align: center;
+   border-radius: 50%;
+   color: #1d293c;
+   cursor: pointer;
+}
+.Main-Component .Right-Section-Header .Header-LogOut-Icon i.material-icons {
+   font-size: 21px;
+   font-weight: 600;
+   background-image: linear-gradient( to bottom, #253592, #0f7bd2);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+
+.Main-Component .Right-Section-Content{
+   height: calc(100vh - 75px);
+   overflow-y: auto;
+}
+
+.Main-Component .Right-Section-Content::-webkit-scrollbar {
+   width: 6px;
+   border-radius: 6px;
+}
+.Main-Component .Right-Section-Content::-webkit-scrollbar-track {
+   background: #131f2d;
+   border-radius: 6px;
+   border: none;
+}
+.Main-Component .Right-Section-Content::-webkit-scrollbar-thumb {
+   border-radius: 6px;
+   background-image: linear-gradient(to bottom, rgba(11, 196, 243, 0.5), rgba(14, 224, 197, 0.5));
+}
+.Main-Component .Right-Section-Content::-webkit-scrollbar-thumb:hover {
+   background-image: linear-gradient(to bottom, rgba(11, 196, 243, 0.7), rgba(14, 224, 197, 0.7));
+   cursor: pointer;
+}

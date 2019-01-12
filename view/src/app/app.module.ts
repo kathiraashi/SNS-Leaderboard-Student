@@ -9,7 +9,7 @@
    import { RouterModule, Routes } from '@angular/router';
 
 // Feature Modules
-   import { MatCheckboxModule, MatDatepickerModule, MatNativeDateModule, } from '@angular/material';
+   import { MatCheckboxModule, MatDatepickerModule, MatNativeDateModule, MatTooltipModule } from '@angular/material';
    import { ImageCropperModule } from 'ngx-image-cropper';
    import { ModalModule } from 'ngx-bootstrap';
 
@@ -22,8 +22,12 @@
    // Common-Components
    import { LoginComponent } from './Components/Common-Components/login/login.component';
    import { AccountActivateComponent } from './Components/Common-Components/account-activate/account-activate.component';
-   // Dashboard
-   import { DashboardComponent } from './Components/dashboard/dashboard.component';
+   // Main
+      import { MainComponent } from './Components/main/main.component';
+      // Dashboard
+         import { DashboardComponent } from './Components/dashboard/dashboard.component';
+      // Activities
+         import { MyActivitiesComponent } from './Components/my-activities/my-activities.component';
 
 
 @NgModule({
@@ -33,8 +37,12 @@
          // Common-Components
             LoginComponent,
             AccountActivateComponent,
-         // Dashboard
-            DashboardComponent
+         // Main
+            MainComponent,
+            // Dashboard
+               DashboardComponent,
+            // Activities
+               MyActivitiesComponent
    ],
    imports: [
       // Default Modules
@@ -49,6 +57,7 @@
          MatDatepickerModule,
          MatNativeDateModule,
          ImageCropperModule,
+         MatTooltipModule,
          ModalModule.forRoot(),
       // Routing Module
          AppRoutingModule

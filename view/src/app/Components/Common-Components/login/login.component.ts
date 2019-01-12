@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit {
                const ReceivingData = JSON.parse(response['_body']);
                if (response['status'] === 200 && ReceivingData.Status) {
                   this.Toastr.NewToastrMessage({ Type: 'Success', Message: 'Successfully Logged In' });
-                  this.router.navigate(['/Dashboard']);
+                  this.router.navigate(['/Main/Activities']);
                } else if (response['status'] === 200 || response['status'] === 400 || response['status'] === 417 && !ReceivingData.Status ) {
                   this.Toastr.NewToastrMessage({ Type: 'Error', Message: ReceivingData['Message'] });
                } else {

@@ -133,9 +133,6 @@
   color:    #227084;
   opacity:  1;
 }
-.AccountActivate-Component .Box .Form-Input > input::placeholder {
-   color:    #227084;
-}
 .AccountActivate-Component .Box .Form-Input .Input-Suggestion {
    position: relative;
 }
