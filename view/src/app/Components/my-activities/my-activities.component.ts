@@ -39,15 +39,16 @@ export class MyActivitiesComponent implements OnInit {
                         const DecryptedData = JSON.parse(CryptoBytes.toString(CryptoJS.enc.Utf8));
                         DecryptedData.map(obj => {
                            obj['MaxPoints'] = Math.max.apply(Math, obj['MaxPoints_Array'].map( obj_1 => parseFloat(obj_1.Max_Points) ));
+                           obj['Active'] = false;
                            return obj;
                         });
                         this.Activities_List = DecryptedData;
-                        DecryptedData.map(obj => {
-                           this.Activities_List.push(obj);
-                        });
-                        DecryptedData.map(obj => {
-                           this.Activities_List.push(obj);
-                        });
+                        // DecryptedData.map(obj => {
+                        //    this.Activities_List.push(obj);
+                        // });
+                        // DecryptedData.map(obj => {
+                        //    this.Activities_List.push(obj);
+                        // });
                         console.log(this.Activities_List);
                      } else if (response['status'] === 400 || response['status'] === 417 || response['status'] === 401 && !ResponseData['Status']) {
                         this.Toastr.NewToastrMessage({ Type: 'Error', Message: ResponseData['Message'] });

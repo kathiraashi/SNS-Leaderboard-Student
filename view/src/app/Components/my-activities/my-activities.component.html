@@ -1,7 +1,21 @@
-<div class="Activity-Component">
-   <div class="Activities-List">
+<div class="Api-Loader" *ngIf="Loader">
+   <div class="loading-cube-grid">
+      <div class="loading-cube loading-cube1"></div>
+      <div class="loading-cube loading-cube2"></div>
+      <div class="loading-cube loading-cube3"></div>
+      <div class="loading-cube loading-cube4"></div>
+      <div class="loading-cube loading-cube5"></div>
+      <div class="loading-cube loading-cube6"></div>
+      <div class="loading-cube loading-cube7"></div>
+      <div class="loading-cube loading-cube8"></div>
+      <div class="loading-cube loading-cube9"></div>
+      </div>
+</div>
 
-      <div class="Activity" *ngFor="let Activity of Activities_List; let i=index">
+<div class="Activity-Component"  *ngIf="!Loader">
+   <div class="Activities-List">
+      <div class="Activity" *ngFor="let Activity of Activities_List; let i=index" [ngClass]="{'active': Activity?.Active}" (click)="Activity.Active = !Activity.Active">
+         <div class="Hover-Effect"> Click to full view </div>
          <h4 class="Activity-Name"> {{Activity?.Activity_Name}} </h4>
          <h5 class="Level-Name"> {{Activity?.Level?.Level_Name}}  </h5>
          <h6 class="Activity-Description"> {{Activity?.Description}} </h6>
@@ -33,7 +47,7 @@
                      <span class="Text"> Set As Goal </span>
                   </span>
                </div>
-               <div class="Action-Menu-Icon">
+               <div class="Action-Menu-Icon" *ngIf="Activity?.Skip_Activity">
                   <i class="material-icons"> indeterminate_check_box </i>
                   <span class="Action-Text">
                      <span class="Text"> Skip This </span>

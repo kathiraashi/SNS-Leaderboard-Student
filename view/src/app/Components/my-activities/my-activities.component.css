@@ -53,19 +53,39 @@
    background-image: linear-gradient(to right, #f3dc13, #00233a);
 }
 
-.Activity-Component > .Activities-List > .Activity:hover{
+.Activity-Component > .Activities-List > .Activity.active{
    width: 100%;
    grid-column: span 2;
    grid-row: span 2;
 }
-.Activity-Component > .Activities-List > .Activity:hover .Activity-Description{
+.Activity-Component > .Activities-List > .Activity .Hover-Effect{
+   display: none
+}
+.Activity-Component > .Activities-List > .Activity:hover:not(.active) .Hover-Effect {
+   display: block;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   margin: 0 auto;
+   text-align: center;
+   line-height: 90px;
+   color: #ffffff;
+   background-image: linear-gradient( to top left, rgba(29, 162, 195, 0.7), rgba(29, 58, 76, 0.7));
+   font-weight: 600;
+   cursor: pointer;
+}
+.Activity-Component > .Activities-List > .Activity.active .Activity-Description{
    display: block;
 }
-.Activity-Component > .Activities-List > .Activity:hover .More{
+.Activity-Component > .Activities-List > .Activity.active .More{
    height: auto;
    padding: 5px 0px;
 }
-.Activity-Component > .Activities-List > .Activity:hover .Action-Menu{
+.Activity-Component > .Activities-List > .Activity.active .Action-Menu{
    display: block;
 }
 
